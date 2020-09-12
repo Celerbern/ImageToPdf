@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageToPDF"
+		xmlns:resx="clr-namespace:ImageToPDF.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="90" Width="320" ResizeMode="CanMinimize">
     <Grid>
-        
+		<Button Margin="10" HorizontalAlignment="Left" Height="30" Width="140" Name="SelectFileButton" Click="SelectFileButton_Click">
+			<TextBlock Margin="5" Text="{x:Static resx:Resources.SelectFilesButtonText}"/>
+		</Button>
+		<Button Margin="10" HorizontalAlignment="Right" Height ="30" Width="140" Name="ConvertToPDFButton" Click="ConvertToPDFButton_Click" IsEnabled="False">
+			<TextBlock Margin="5" Text="{x:Static resx:Resources.ConvertToPDFButtonText}"/>
+		</Button>
     </Grid>
 </Window>
